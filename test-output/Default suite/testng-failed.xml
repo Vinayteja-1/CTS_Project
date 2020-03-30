@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TESTCASES.task_firefox">
+      <class name="TESTCASES.Test1">
         <methods>
-          <include name="f"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
+          <include name="closeBrowser"/>
+          <include name="lanuchBrowser"/>
+          <include name="login_blank" invocation-numbers="0"/>
         </methods>
-      </class> <!-- TESTCASES.task_firefox -->
+      </class> <!-- TESTCASES.Test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,10 +16,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import excel.read_excel;
+import excel.Read_excel;
 
 
-public class utility extends read_excel {
+public class Utility extends Read_excel {
 	protected WebDriver d;
 //	public utility(WebDriver d)
 //	{
@@ -28,11 +28,11 @@ public class utility extends read_excel {
 	
 		// TODO Auto-generated constructor stub
 	
-	public void ScreenShot(int i)
+	public void ScreenShot()
 	{
 		
 		File f1=((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
-	    File f2=new File("C:\\Users\\UTTAM BALA\\eclipse-workspace\\TASK_MANGER_LOGIN\\src\\test\\resources\\SCREENSHOT\\"+i+".png");
+	    File f2=new File("src\\test\\resources\\SCREENSHOT\\"+System.currentTimeMillis()+".png");
 	try {
 		FileUtils.copyFile(f1, f2);
 	} catch (IOException e) {
@@ -42,7 +42,7 @@ public class utility extends read_excel {
 	
 		
 	}
-	public WebDriver lunchBroser(String br,String url)
+	public WebDriver launchBroser(String br,String url)
 	{
 		
 		if(br.contains("CHROME") ) {
@@ -66,10 +66,11 @@ public class utility extends read_excel {
 		try{
 			WebDriverWait wait =new WebDriverWait(d,timeout);
 		     WebElement element =wait.until(ExpectedConditions.visibilityOfElementLocated(loc));
+		     System.out.println("fo");
 		     return element;
 		     }
 		catch(Exception e)
-		{}
+		{ System.out.println("not");}
 		return null;
 	}
 	
@@ -77,9 +78,11 @@ public class utility extends read_excel {
 		try {
 		WebDriverWait wait=new WebDriverWait(d,timeout);
 		 WebElement element =wait.until(ExpectedConditions.elementToBeClickable(loc));
+		 System.out.println("fo");
+
 		 return element;
 		}
-		catch(Exception e) {}
+		catch(Exception e) {System.out.println("not");}
 		return null;
 	}
 

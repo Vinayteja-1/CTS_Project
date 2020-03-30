@@ -5,15 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import libary.utility;
+import libary.Utility;
 
-public class add_task_page {
+
+public class Add_Task_Page {
 	WebDriver d;
-	public add_task_page(WebDriver d)
+	public Add_Task_Page(WebDriver d)
 	{
 		this.d=d;
 	}
-	utility u=new utility();
+	Utility u=new Utility();
 	By add_task=By.xpath("//a[@href='TaskRecord.php']");
 	By task_name=By.xpath("//input[@name='task_name']");
 	By desc=By.xpath("//textarea[@name='task_desc']");

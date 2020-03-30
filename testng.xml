@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-     <class name="TESTCASES.task_firefox"/>
-      <class name="TESTCASES.task_chrome"/>
-       </classes>
+      <class name="TESTCASES.Test1"/>
+      <class name="TESTCASES.Test2"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
